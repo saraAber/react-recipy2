@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.signin-container {
+  /* background: url(  "../../public/images/magnum.webp") no-repeat center center fixed; */
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin-form {
+  background: rgba(255, 255, 255, 0.046);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+}
+
+.signin-form h2 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.signin-form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 250, 250, 0.3);
+  border-radius: 8px;
+  color: white;
+}
+
+.signin-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.signin-form p {
+  color: red;
+  font-size: 12px;
+}
+
+.signin-form button {
+  background: #eae600;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.signin-form button:disabled {
+  background: gray;
+}
+
+.signin-form button:hover:not(:disabled) {
+  background: #020202;
+  color: #eae600;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
