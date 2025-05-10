@@ -94,9 +94,7 @@ const EditRecipie = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <TextField label="שם המתכון" {...register("Name")} error={!!errors.Name} helperText={errors.Name?.message} fullWidth sx={{ mb: 2 }} />
             <TextField  label="דרגת קושי" {...register("Difficulty")} error={!!errors.Difficulty} helperText={errors.Difficulty?.message} fullWidth sx={{ mb: 2 }}>
-              {/* <MenuItem value="קלה">קלה</MenuItem>
-              <MenuItem value="בינונית">בינונית</MenuItem>
-              <MenuItem value="קשה">קשה</MenuItem> */}
+  
             </TextField>
             <TextField label="משך זמן" type="number" {...register("Duration")} error={!!errors.Duration} helperText={errors.Duration?.message} fullWidth sx={{ mb: 2 }} />
             <TextField label="תיאור" {...register("Description")} error={!!errors.Description} helperText={errors.Description?.message} fullWidth sx={{ mb: 2 }} />
@@ -104,13 +102,7 @@ const EditRecipie = () => {
             {categories && categories.map((item) => (
   <MenuItem key={item.Id} value={item.Id}>{item.Name}</MenuItem>
 ))}                        
-                        
-                         {/* <MenuItem value={1}>ארועים</MenuItem>
-                         <MenuItem value={2}>ביתי</MenuItem>
-                         <MenuItem value={3}>דיאטטי</MenuItem>
-                         <MenuItem value={4}>זול</MenuItem>
-                         <MenuItem value={5}>בר</MenuItem>
-                         <MenuItem value={6}>מבושל</MenuItem> */}
+                
             </TextField>
             <TextField label="כתובת תמונה (לא חובה)" {...register("Img")} error={!!errors.Img} helperText={errors.Img?.message} fullWidth sx={{ mb: 2 }} />
 

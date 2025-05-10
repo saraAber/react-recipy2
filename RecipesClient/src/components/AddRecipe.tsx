@@ -9,7 +9,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { userContext } from "./userContext";
 import { useNavigate } from "react-router-dom";
 import { CatContext } from "./categoriesContext";
-// import {categories}from 
 // הגדרת הוולידציות
 const validationSchema = yup.object({
   Name: yup.string().required("שם חובה"),
@@ -33,20 +32,7 @@ const validationSchema = yup.object({
 });
 
 const AddRecipe = () => {
-  // const [categories, setCategories] = useState<Array<{ Id: number; Name: string }>>([]);
 
-  // const getCategories = async () => {
-  //   try {
-  //     const res = await axios.get("http://localhost:8080/api/category");
-  //     setCategories(res.data);
-  //   } catch (error) {
-  //     console.error("Error fetching categories", error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getCategories();
-  // }, [])
   const { categories } = useContext(CatContext);
     const { Myuser } = useContext(userContext); // קבלת ה-ID של המתכון הנוכחי
   const nav = useNavigate();
@@ -70,12 +56,10 @@ const AddRecipe = () => {
 
   const onSubmit = async (data: any) => {
     const updatedData = { ...data, UserId: Myuser?.Id }; // הוספת ה-ID לנתונים
-    console.log("Form submitted:", updatedData);
     try {
       const res = await axios.post(`http://localhost:8080/api/recipe`, updatedData, {
         headers: { "Content-Type": "application/json" },
       });
-      console.log(res.data);
       nav("./ShowRecipie");
     } catch (error) {
       console.error("שגיאה בהוספת מתכון", error);

@@ -1,8 +1,6 @@
 
-// import { useContext } from "react";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import  "../styles/home.css"
-// import {userContext }from "./userContext";
 import { userContext } from "./userContext";
 import { useContext, useState } from "react";
 

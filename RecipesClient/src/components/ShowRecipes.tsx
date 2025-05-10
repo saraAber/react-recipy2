@@ -95,7 +95,7 @@ const ShowRecipes = observer(() => {
               select
               size="small"
               value={categoryFilter}
-              onChange={(e) => {setCategoryFilter(Number(e.target.value));console.log(categoryFilter)}}
+              onChange={(e) => {setCategoryFilter(Number(e.target.value));}}
               sx={{ mb: 1 }}
             >
              {categories&&categories.map((item)=> <MenuItem value={item.Id}>{item.Name}</MenuItem>)}
@@ -112,9 +112,7 @@ const ShowRecipes = observer(() => {
               onChange={(e) => setDiff(Number(e.target.value))}
               sx={{ mb: 1 }}
             >
-              {/* <MenuItem value="קלה">קל</MenuItem>
-              <MenuItem value="בינונית">בינוני</MenuItem>
-              <MenuItem value="קשה">קשה</MenuItem> */}
+   
             </TextField>
             {/* זמן */}
             <TextField
